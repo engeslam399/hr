@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS hr;
+
+USE hr;
+
+CREATE TABLE IF NOT EXISTS employees (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    firstname VARCHAR(100) NOT NULL,
+    lastname VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    phone_number VARCHAR(20),
+    salary DECIMAL(10, 2) NOT NULL
+);
